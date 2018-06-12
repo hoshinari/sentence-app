@@ -3,9 +3,36 @@
 <head>
   <title>はじめてのアプリ</title>
   <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css" >
 </head>
 <body>
-  <h1>はじめてのアプリ作成中、、、（おそらく笑）</h1>
-  <p>適当にコメントしときます</p>
+  <nav class="navbar fixed-top navbar-light" style="background-color: #447da5;">
+    <a class="navbar-brand" href="#">センテンスすぷりんぐ</a>
+  </nav>
+  <div id="container" >
+    <h1>はじめてのアプリ作成中、、、</h1>
+    <p>ここまでやったところでwebpack使ったが良いのでは説浮上</p>
+    <p>明日はwebpackやるはず（あとこれは後で消す）</p>
+
+    <div id="app" class = "textarea" style="margin-top:100px;">
+      <textarea v-model="message" placeholder="add multiple lines" name="example" cols="50" rows="10"></textarea>
+      <br>
+      <span>Multiline message is:</span><br>
+      <p style="white-space: pre-line;">{{ message }}</p>
+    </div>
+    <div>
+      <b-button>I am a Button</b-button>
+      <b-button href="#">I am a Link</b-button>
+    </div>
+
+  </div>
+  
+  
+
 </body>
 </html>
